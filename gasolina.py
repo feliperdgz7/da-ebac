@@ -7,9 +7,6 @@ import seaborn as sns
 data = pd.read_csv('gasolina.csv', sep=',')
 
 #Grafico
-with sns.axes_style('whitegrid'):
-
-  grafico = sns.lineplot(data=data, x="dia", y="venda")
-  grafico.set(title='Preço da Gasolina', xlabel='Dia', ylabel='Preço(R$)');
+grafico = sns.lineplot(data=data, x="dia", y="venda")
 sfig = grafico.get_figure()
 sfig.savefig("gasolina.png", orientation="landscape")
